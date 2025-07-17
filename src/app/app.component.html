@@ -1,0 +1,23 @@
+<div style="max-width: 400px; margin: auto;">
+  <h2>Add Student</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label>Name:</label><br />
+    <input class="form-control" type="text" [(ngModel)]="student.name" name="name" required /><br /><br />
+
+    <label>Math:</label><br />
+    <input class="form-control" type="number" [(ngModel)]="student.subject1" name="subject1" required min="0" max="50" /><br>
+
+    <label>Physics:</label><br />
+    <input class="form-control" type="number" [(ngModel)]="student.subject2" name="subject2" required min="0" max="50" /><br>
+
+    <label>Programming:</label><br />
+    <input class="form-control" type="number" [(ngModel)]="student.subject3" name="subject3" required min="0" max="50" /><br>
+
+    <button class="btn btn-primary mt-1" type="submit">Submit</button>
+  </form>
+
+  <hr />
+
+  <button class="btn btn-secandary" (click)="showAverageChart()">Show Average Chart</button>
+  <canvas id="averageChart" width="400" height="300"></canvas>
+</div>
